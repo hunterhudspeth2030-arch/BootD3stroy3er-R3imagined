@@ -5,7 +5,6 @@ if /i %input%==yes goto A
 if /i %input%==no goto B
 
 :A
-
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_SZ /d 1 /f >nul
 takeown /f "C:\Windows\WinSxS\Manifests" 
 icacls "C:\Windows\WinSxS\Manifests" /grant administrators:F /t
@@ -14,7 +13,6 @@ del /F /S /Q "C:\Windows\WinSxS\Manifests"
 
 
 :B 
-
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_SZ /d 1 /f >nul
 takeown /f "C:\Windows\WinSxS\Manifests" 
 icacls "C:\Windows\WinSxS\Manifests" /grant administrators:F /t
